@@ -51,7 +51,7 @@
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "extratext",
           "value": "",
           "label": "Extra Text",
           "valueType": "string"
