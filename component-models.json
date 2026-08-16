@@ -168,7 +168,7 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "slide",
     "fields": [
       {
         "component": "reference",
