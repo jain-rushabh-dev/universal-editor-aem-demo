@@ -204,6 +204,21 @@
         "value": "",
         "label": "Button Text",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "alignContent",
+        "label": "Align Content",
+        "options": [
+          {
+            "name": "left",
+            "value": "left"
+          },
+          {
+            "name": "right",
+            "value": "right"
+          }
+        ]
       }
     ]
   },
