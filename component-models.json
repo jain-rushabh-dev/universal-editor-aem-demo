@@ -157,6 +157,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
       }
     ]
   },
