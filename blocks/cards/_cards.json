@@ -52,7 +52,7 @@
         {
           "component": "richtext",
           "name": "quote",
-          "value": "",
+          "value": "Quote Text",
           "label": "Quote",
           "valueType": "string"
         }
