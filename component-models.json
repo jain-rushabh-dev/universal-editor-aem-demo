@@ -179,30 +179,16 @@
       },
       {
         "component": "text",
-        "name": "preTitle",
-        "value": "",
-        "label": "Pre-Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
       },
       {
         "component": "richtext",
-        "name": "description",
+        "name": "text",
         "value": "",
-        "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "buttonTxt",
-        "value": "",
-        "label": "Button Text",
+        "label": "Text",
         "valueType": "string"
       }
     ]
