@@ -29,16 +29,30 @@
         },
         {
           "component": "text",
-          "valueType": "string",
-          "name": "imageAlt",
-          "label": "Alt",
-          "value": ""
+          "name": "preTitle",
+          "value": "",
+          "label": "Pre-Title",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "valueType": "string"
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "description",
           "value": "",
-          "label": "Text",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "buttonTxt",
+          "value": "",
+          "label": "Button Text",
           "valueType": "string"
         }
       ]
