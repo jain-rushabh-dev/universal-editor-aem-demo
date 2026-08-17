@@ -43,11 +43,42 @@
           "multi": false
         },
         {
-          "component": "text",
+          "component": "title",
           "name": "preTitle",
           "value": "",
           "label": "Pre-Title",
           "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "preTitleType",
+          "label": "Pre-Title Type",
+          "options": [
+            {
+              "name": "h1",
+              "value": "h1"
+            },
+            {
+              "name": "h2",
+              "value": "h2"
+            },
+            {
+              "name": "h3",
+              "value": "h3"
+            },
+            {
+              "name": "h4",
+              "value": "h4"
+            },
+            {
+              "name": "h5",
+              "value": "h5"
+            },
+            {
+              "name": "h6",
+              "value": "h6"
+            }
+          ]
         },
         {
           "component": "text",
@@ -84,6 +115,9 @@
               "value": "right"
             }
           ]
+        },
+        {
+          "$ref": "../../models/_button.json"
         }
       ]
     }
