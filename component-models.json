@@ -237,6 +237,11 @@
         "valueType": "string"
       },
       {
+        "component": "aem-content",
+        "name": "buttonLink",
+        "label": "Button Link"
+      },
+      {
         "component": "select",
         "name": "alignContent",
         "label": "Align Content",
@@ -250,9 +255,6 @@
             "value": "right"
           }
         ]
-      },
-      {
-        "$ref": "../../models/_button.json"
       }
     ]
   },

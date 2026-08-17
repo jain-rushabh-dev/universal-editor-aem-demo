@@ -5,9 +5,16 @@ export default function decorate(block) {
   [...block.children].forEach((div) => {
     div.className = 'splide__slide';
 
-    const [image, preTitle, preTitleType, title, description, button, alignContent] = [...div.children];
+    const [image, preTitle, preTitleType, title, description, buttonTxt, buttonLink, alignContent] = [...div.children];
 
     image.className = 'cmp-teaser__image';
+    preTitle.className = 'cmp-teaser__pretitle';
+    title.className = 'cmp-teaser__title';
+    description.className = 'cmp-teaser__description';
+    button.className = 'cmp-teaser__action-container';
+
+    const teaserContentDiv = document.createElement('div');
+    teaserContentDiv.className = 'cmp-teaser__content';
 
   });
 
