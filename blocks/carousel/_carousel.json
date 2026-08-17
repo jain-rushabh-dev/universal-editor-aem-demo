@@ -50,9 +50,16 @@
           "valueType": "string"
         },
         {
+          "component": "text",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
           "component": "select",
-          "name": "preTitleType",
-          "label": "Pre-Title Type",
+          "name": "titleType",
+          "label": "Title Type",
           "options": [
             {
               "name": "h1",
@@ -81,13 +88,6 @@
           ]
         },
         {
-          "component": "text",
-          "name": "title",
-          "value": "",
-          "label": "Title",
-          "valueType": "string"
-        },
-        {
           "component": "richtext",
           "name": "description",
           "value": "",
@@ -95,16 +95,16 @@
           "valueType": "string"
         },
         {
+          "component": "aem-content",
+          "name": "buttonLink",
+          "label": "Button Link"
+        },
+        {
           "component": "text",
           "name": "buttonTxt",
           "value": "",
           "label": "Button Text",
           "valueType": "string"
-        },
-        {
-          "component": "aem-content",
-          "name": "buttonLink",
-          "label": "Button Link"
         },
         {
           "component": "select",

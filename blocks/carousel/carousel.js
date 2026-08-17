@@ -5,13 +5,23 @@ export default function decorate(block) {
   [...block.children].forEach((div) => {
     div.className = 'splide__slide';
 
-    const [image, preTitle, preTitleType, title, description, buttonTxt, buttonLink, alignContent] = [...div.children];
+    const [image, preTitle, title, titleType, description, button, buttonTxt, alignContent] = [...div.children];
 
     image.className = 'cmp-teaser__image';
     preTitle.className = 'cmp-teaser__pretitle';
     title.className = 'cmp-teaser__title';
     description.className = 'cmp-teaser__description';
-    button.className = 'cmp-teaser__action-container';
+
+    const titleTag = document.c
+    const buttonLink = button.querySelector('a');
+    if (buttonLink) {
+      button.className = 'cmp-teaser__action-container';
+      buttonLink.className = 'cmp-teaser__action-link';
+      buttonLink.textContent = buttonTxt.textContent;
+    } else {
+      button.remove();
+      buttonTxt.remove();
+    }
 
     const teaserContentDiv = document.createElement('div');
     teaserContentDiv.className = 'cmp-teaser__content';
