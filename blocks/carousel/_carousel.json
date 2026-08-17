@@ -96,12 +96,12 @@
         },
         {
           "component": "aem-content",
-          "name": "buttonLink",
+          "name": "button",
           "label": "Button Link"
         },
         {
           "component": "text",
-          "name": "buttonTxt",
+          "name": "buttonText",
           "value": "",
           "label": "Button Text",
           "valueType": "string"
