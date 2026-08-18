@@ -5,26 +5,54 @@ export default function decorate(block) {
   [...block.children].forEach((div) => {
     div.className = 'splide__slide';
 
-    const [image, preTitle, title, description, button, buttonTxt, alignContent] = [...div.children];
+    let [image, preTitle, title, description, button, alignContent] = [...div.children];
 
     image.className = 'cmp-teaser__image';
-    preTitle.className = 'cmp-teaser__pretitle';
-    title.className = 'cmp-teaser__title';
     description.className = 'cmp-teaser__description';
 
+    if (preTitle.firstElementChild) {
+      preTitle.firstElementChild.className = 'cmp-teaser__pretitle';
+      preTitle = preTitle.firstElementChild;
+    } else {
+//      preTitle.remove();
+    }
+    if (title.firstElementChild) {
+       title.firstElementChild.className = 'cmp-teaser__title';
+       title = title.firstElementChild;
+    } else {
+//       preTitle.remove();
+    }
     const buttonLink = button.querySelector('a');
     if (buttonLink) {
       button.className = 'cmp-teaser__action-container';
       buttonLink.className = 'cmp-teaser__action-link';
-      buttonLink.textContent = buttonTxt.textContent;
+      button.replaceChildren(buttonLink);
     } else {
       button.remove();
-      buttonTxt.remove();
     }
 
     const teaserContentDiv = document.createElement('div');
     teaserContentDiv.className = 'cmp-teaser__content';
+    teaserContentDiv.append(preTitle);
+    teaserContentDiv.append(title);
+    teaserContentDiv.append(description);
+    teaserContentDiv.append(button);
 
+    const teaserDiv = document.createElement('div');
+    teaserDiv.className = 'teaser';
+    teaserDiv.append(teaserContentDiv);
+    teaserDiv.append(image);
+
+    if (alignContent.textContent == 'left') {
+      teaserDiv.classList.add('content-on-bottom');
+      teaserDiv.classList.add('content-on-left');
+    } else {
+      teaserDiv.classList.add('content-on-top');
+      teaserDiv.classList.add('content-on-right');
+    }
+    alignContent.remove();
+
+    div.append(teaserDiv);
   });
 
   const slideTrack = document.createElement('div');
@@ -45,7 +73,7 @@ export default function decorate(block) {
   const splide = new Splide('.splide', {
     type: 'loop',
     arrows: false,
-    padding: '5rem'
+    padding: '6.52174%'
   });
   splide.mount();
 }
