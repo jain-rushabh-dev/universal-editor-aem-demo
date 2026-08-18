@@ -21,6 +21,7 @@ export default function decorate(block) {
     img.alt = image.querySelector('img').alt || '';
 
     picture.append(source, img);
+    mobileImage.remove();
     image.replaceChildren(picture);
 
     if (preTitle.firstElementChild) {
