@@ -5,10 +5,23 @@ export default function decorate(block) {
   [...block.children].forEach((div) => {
     div.className = 'splide__slide';
 
-    let [image, preTitle, title, description, button, alignContent] = [...div.children];
+    let [image, mobileImage, preTitle, title, description, button, alignContent] = [...div.children];
 
     image.className = 'cmp-teaser__image';
     description.className = 'cmp-teaser__description';
+
+    const picture = document.createElement('picture');
+
+    const source = document.createElement('source');
+    source.media = '(max-width: 767px)';
+    source.srcset = mobileImage.querySelector('img').src;
+
+    const img = document.createElement('img');
+    img.src = image.querySelector('img').src;
+    img.alt = image.querySelector('img').alt || '';
+
+    picture.append(source, img);
+    image.replaceChildren(picture);
 
     if (preTitle.firstElementChild) {
       preTitle.firstElementChild.className = 'cmp-teaser__pretitle';
